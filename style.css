@@ -24,20 +24,24 @@ body{
 }
 
 .input{
-    position: relative;
     font-size: 0.8125rem;
     margin-bottom: 2rem;
 }
 
 .input__enter{
     box-sizing: border-box;
-    height: 2rem;
     width: 16rem;
-    padding: 0.375rem 0.75rem;
+    height: 2rem;
+    border: 0;
+    margin: 0;
     background-color: #FFFFFF;
     border-radius: 0.25rem;
     font-family: 'Ubuntu', sans-serif;
     font-size: 0.8125rem;
+}
+
+.input__area{
+    position: relative;
 }
 
 .input__enter::placeholder{
@@ -58,11 +62,11 @@ body{
 }
 
 
-.input-error .input__enter{
+.input_error .input__enter{
     border: 1px solid var(--red-border);
 }
 
-.input-error .x-large{
+.input_error .x-large{
     position: absolute;
     width: 1rem;
     height: 1rem;
@@ -71,17 +75,30 @@ body{
     cursor: pointer;
 }
 
-.input-block .input__enter{
+.input_blocked .input__enter{
     border: 1px solid var(--blue-border);
     background-color: var(--color-placeholder);
 }
+/*-------------------------*/
 
-.input-block .locked
-{
+
+.input_blocked .blocked{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    width: 1rem;
-    height: 1rem;
-    fill: black;
-    right: 0.5rem;
-    cursor: pointer;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0;
+    padding: 0;
+
+    outline: none;
+    background: transparent;
+    border: 0;
 }
+
+.blocked .input__icon_blocked{
+  height: 1rem;
+  width: 1rem;
+}
+
