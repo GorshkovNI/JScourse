@@ -778,6 +778,7 @@ body{
     height: 1rem;
     margin-left: 0;
     fill: var(--color-blue);
+    
 }
 
 .showswitcher .light__version .button__text{
