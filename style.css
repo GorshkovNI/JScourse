@@ -109,6 +109,84 @@ body{
     fill: var(--black);
 }
 
+
+.searchbars{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30rem;
+    width: 30rem;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+    border: 1px dashed #7758d3;
+}
+
+.searchbar{
+    font-family: "Ubuntu";
+    font-size: 0.8125rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.searchbar__area{
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 16rem;
+    height: 2rem;
+    border: 1px solid var(--color-blue);
+    border-radius: 0.25rem;
+    background-color: var(--white);
+}
+
+.searchbar__icon{
+    stroke: var(--color-blue);
+    height: 1rem;
+    width: 1rem;
+    margin: 0.5rem;
+}
+
+.search__text{
+    box-sizing: border-box;
+    width: 13.75rem;
+    height: 1rem;
+    padding: 0;
+    border: 0;
+    color: var(--black);
+}
+
+.search__text::placeholder{
+    color: var(--color-light-blue);
+}
+
+.search__text:focus{
+    outline: none;
+}
+
+.searchbar_full .search__text{
+    width: 11.75rem;
+    margin-right: 0.5rem;
+}
+
+.search__button_close{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: transparent;
+    border: 0;
+    padding: 0;
+}
+
+.button__icon{
+    stroke: var(--color-blue);
+    width: 1rem;
+    height: 1rem;
+}
+
+
 .checkbox-wrapper{
     display: flex;
     align-items: center;
@@ -222,6 +300,7 @@ body{
 .dropdowns{
     position: relative;
     height: 22rem;
+    width: 42rem;
     border: 1px dashed #7758d3;
     padding: 4rem;
 }
@@ -407,9 +486,11 @@ body{
 }
 
 .choose-chem__area{
+    background-color: var(--white);
     display: flex;
     flex-direction: column;
     padding: 1rem;
+    border-radius: 0.5rem;
     font-family: "Ubuntu", serif;
     font-style: normal;
     font-weight: 400;
@@ -473,6 +554,12 @@ body{
 }
 
 /*---Button----*/
+
+.buttons{
+    width: 50rem;
+    margin-top: 3rem;
+    border: 1px dashed #7758d3;;
+}
 
 .up-block{
     display: flex;
@@ -588,6 +675,143 @@ body{
 .button-click_transparent_black .random_icon{
     
 }
+
+
+.down-block{
+    display: flex;
+}
+
+.button-click-nopadding_big{
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    width: 5.75rem;
+    height: 1.5rem;
+    border: 0;
+    border-radius: 0.25rem;
+}
+
+
+.button-click-nopadding_medium{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    width: 4.5rem;
+    height: 1.5rem;
+    border: 0;
+    border-radius: 0.25rem;
+}
+
+.button-click-nopadding_small{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 0;
+    border-radius: 0.25rem;
+}
+
+.button-click-nopadding .text__area{
+    margin: 0;
+}
+
+.button-click-nopadding .random_icon{
+    box-sizing: border-box;
+    width: 1rem;
+    height: 1rem;
+    margin: 0.25rem 0.25rem 0.25rem 0.5rem;
+}
+
+.button-click-nopadding_small .random_icon{
+    margin: 0.25rem;
+}
+
+.button-click-nopadding_blue{
+    background-color: var(--color-blue);
+}
+
+.button-click-nopadding_transparent_blue{
+    background-color: transparent;
+}
+
+.button-click-nopadding_transparent_blue .text__area{
+    color: var(--color-blue);
+}
+
+.button-click-nopadding_transparent_blue .random_icon{
+    
+}
+
+/*---PageHeader----*/
+
+.pageheader{
+    width: 50rem;
+    margin-top: 3rem;
+    border: 1px dashed #7758d3;;
+}
+
+.showswitcher{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 43.125rem;
+    height: 2rem;
+    margin: 3rem;
+}
+
+.showswitcher .text__area{
+    width: 12.375rem;
+    height: 2rem;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--black);
+}
+
+
+.showswitcher .light__version{
+    box-sizing: border-box;
+    width: 8.75rem;
+    height: 2rem;
+}
+
+.showswitcher .sun__icon{
+    width: 1rem;
+    height: 1rem;
+    margin-left: 0;
+    fill: var(--color-blue);
+}
+
+.showswitcher .light__version .button__text{
+    width: 5.25rem;
+    height: 1rem;
+    margin-left: 0.5rem;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    color: var(--color-blue);
+}
+
+.showswitcher_yes{
+    position: relative;
+}
+
+.showswitcher_yes .choose-chem{
+    top: 2rem;
+}
+
 
 
 
